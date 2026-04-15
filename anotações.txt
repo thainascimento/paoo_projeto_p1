@@ -3,3 +3,15 @@ const = declara uma variavel constante - valores fixos
 Promise = objeto que representa algo que vai acontecer no futuro (resultado ou erro)
 -pode dar certo (.then)
 -pode dar erro (.catch)
+res = resposta completa da requisição
+res.data = só os dados q a api retornou
+current_weather = pega apenas o clima atual
+const dados = res.data.current_weather ---> constante que vai retornar a respota da condicao do clima atual
+
+como montar a url:
+
+-  https://api.open-meteo.com/v1/forecast  ---> base, end da api. na doc: "The API endpoint /v1/forecast accepts a geographical coordinate, a list of weather variables and responds with a JSON hourly weather forecast for 7 days"
+ADD OS PARAMETROS 
+- ?latitude=${latitude}  ---> passa a variavel da latitude
+- &latitude=${latitude}  ---> E tb passa a variavel da longitude 
+- &current_weather=true  ---> E também passa as condicoes do wheather atual 
