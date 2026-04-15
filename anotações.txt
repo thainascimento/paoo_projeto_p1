@@ -1,0 +1,5 @@
+npm = Node Package Manager - usado para instalar bibliotecas
+const = declara uma variavel constante - valores fixos
+Promise = objeto que representa algo que vai acontecer no futuro (resultado ou erro)
+-pode dar certo (.then)
+-pode dar erro (.catch)

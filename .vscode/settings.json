@@ -1,0 +1,6 @@
+{
+    "editor.lightbulb.enabled": "off",
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.suggest.selectionMode": "never"
+}
