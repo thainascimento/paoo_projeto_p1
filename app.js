@@ -14,6 +14,7 @@ axios
     obterCondicoes (latitude, longitude) // executa obterCondicoes com latitude e longitude para ser utilizzado na parte 2
     consultaWiki(cidade)
 
+    console.log("Cidade:", cidade)
     console.log("Coordenadas:", latitude, 'LAT', longitude, 'LONG') // console que mostra o resultado das coodenadas da cidade 
 
 })
@@ -29,7 +30,7 @@ const obterCondicoes = async (latitude, longitude) => { // a função async que 
         // def o url 
          const res = await axios.get(urlCondicoes) // faz a requisição para a api usando await (espera o resultado)
          const dados = res.data.current_weather // pega só os dados do current wheater dentro da resposta
-
+         
          console.log('Condições atuais') // console só pra dixer que abaixo terão as condições do clima
          console.log('Temperatura:', dados.temperature,'°C') // console q mostra a temp 
          console.log('Vento:', dados.windspeed) // console q mostra o vento
