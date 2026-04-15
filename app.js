@@ -1,6 +1,6 @@
 const axios = require('axios') // importando axios para fazer requisições na internet. tem q usar o cmd npm instal axios no termnal
 
-const cidade = "Paris" // definindo a cidade para verificar a lat e a long
+const cidade = "Maceió" // definindo a cidade para verificar a lat e a long
 const url = `https://geocoding-api.open-meteo.com/v1/search?name=${cidade}&count=1&language=pt&format=json`
 
 axios
@@ -41,9 +41,7 @@ const obterCondicoes = async (latitude, longitude) => { // a função async que 
 }
 // parte 3
 const consultaWiki = (cidade) => {
-
-    const urlWiki = `https://pt.wikipedia.org/api/rest_v1/page/summary/Paris` // URL da Wikipedia com o nome da cidade
-
+    const urlWiki = `https://pt.wikipedia.org/api/rest_v1/page/summary/${cidade}` // URL da Wikipedia com o nome da cidade
     axios
     .get(urlWiki) // faz a requisição para a API da Wikipedia
     .then(res => res.data) // pega apenas os dados da resposta (data)
@@ -62,7 +60,7 @@ const consultaWiki = (cidade) => {
 }
 /* const consultaWiki = async (cidade) => {
 
-    const urlWiki = `https://pt.wikipedia.org/api/rest_v1/page/summary/Paris` // monta a URL da Wikipedia
+    const urlWiki = `https://pt.wikipedia.org/api/rest_v1/page/summary/${cidade}` //  URL da Wikipedia
     try {
         const res = await axios.get(urlWiki) // faz a requisição para a API
         const dados = res.data // pega os dados da resposta
