@@ -11,7 +11,7 @@ axios
     const latitude = data.results[0].latitude // pega a latitude do primeiro resultado retornado
     const longitude = data.results[0].longitude // pega a longitude do primeiro res retornado
 
-    obterCondicoes (latitude, longitude)
+    obterCondicoes (latitude, longitude) // executa obterCondicoes com latitude e longitude para ser utilizzado na parte 2
 
     console.log("Coordenadas:", latitude, 'LAT', longitude, 'LONG') // console que mostra o resultado das coodenadas da cidade 
 
@@ -22,7 +22,7 @@ axios
 
 // iniciando a segunda parte 
 
-const obterCondicoes = async (latitude, longitude) => { // a função async que recebe latitude e longitude para buscar o clima
+const obterCondicoes = async (latitude, longitude) => { // a função async que recebe latitude e longitude para buscar a condicao do clima atual 
     try { // try pra tentar rodar o cod sem erro 
         const urlCondicoes = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
         // função async que recebe latitude e longitude para buscar o clima
